@@ -1,0 +1,44 @@
+.smalltext{
+    font-size: 14px;
+}
+
+.onescreen{
+    height: 600px;
+}
+
+.margin-top10{
+    margin-top: 10px;
+}
+
+.margin-buttom20{
+    margin-bottom: 20px;
+}
+
+.margin-title{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.text-right{
+    text-align: right;
+}
+
+footer {
+    background: #333;
+    color: #eee;
+    padding: 10px;
+}
+
+header {
+    background: #007bff;
+    padding: 10px;
+}
+
+.button-width160{
+    width: 160px;
+}
+
+
+.button-width80{
+    width: 80px;
+}
