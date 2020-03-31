@@ -4,47 +4,43 @@
 <head>
   <title>Toolname-Index</title>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" media="screen" />
   <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="dist/css/mystyle.css" />
   <link rel="stylesheet" type="text/css" href="js/fullpage.js/dist/fullpage.css">
-
 </head>
 
 <body>
   <header>
-    <nav class="navbar sticky-top navbar-expand-md navbar-dark" style="background-color: #563d7c;">
-      <div class="container">
-        <a class="navbar-brand" href="#"><img src="assets/images/partner.png" height="30" alt="Toolname"></a>
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark" style="background-color: #563d7c;">
+      <div class="container" id="myMenu">
+        <a data-menuanchor="firstPage" class="navbar-brand" href="#firstPage"><img src="assets/images/partner.png" height="30" alt="Toolname"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Prediction</a>
+          <ul class="navbar-nav" id="myMenu">
+            <li data-menuanchor="secondPage" class="nav-item active">
+              <a class="nav-link" href="#secondPage">Prediction</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Documentation</a>
+            <li data-menuanchor="thirdPage" class="nav-item">
+              <a class="nav-link" href="#thirdPage">Documentation</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+            <li data-menuanchor="fourthPage" class="nav-item">
+              <a class="nav-link" href="#fourthPage">Contact</a>
             </li>
           </ul>
         </div>
     </nav>
   </header>
+
   <div id="fullpage">
     <!-- first screen -->
     <div class="section active" id="section0">
-
       <h1 class="display-3 text-center margin-title">Toolname</h1>
       <div class="container">
-        <!--     <div class="row">
-      <div class="col-1"></div>
-      <div class="col-10"> -->
         <h6>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
           euismod bibendum laoreet. Proin gravida dolor sit amet lacus
@@ -60,11 +56,7 @@
           nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra
           vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc
           accuan eget.
-
         </h6>
-        <!--       </div>
-      <div class="col-1"></div>
-    </div> -->
         <br />
         <br />
         <div class="row">
@@ -126,22 +118,21 @@
             <h5 class="text-dark">Example File:</h5>
             <li>
               <button type="button" class="btn btn-link font-italic">
-                sample file
+                sample.smile
               </button>
             </li>
           </div>
           <div class="col-6">
-
-              <h5 class="text-dark">Draw Molecular</h5>
-              <button type="button" class="btn btn-outline-primary button-width80" data-toggle="modal"
-                data-target="#JSME">Draw</button>
-                <p></p>
+            <h5 class="text-dark">Draw Molecular</h5>
+            <button type="button" class="btn btn-outline-primary button-width80" data-toggle="modal"
+              data-target="#JSME">Draw</button>
+            <p></p>
             <textarea class="form-control" rows="6" aria-label="With textarea"></textarea>
             <div class="margin-top10 text-right">
               <button type="button" class="btn btn-primary button-width80">Submit</button>
-              <button type="button" class="btn btn-outline-primary button-width80">Clear</button>
+              <button type="button" class="btn btn-outline-primary button-width80"
+                style="margin-left: 10px;">Clear</button>
             </div>
-            
           </div>
         </div>
       </div>
@@ -248,7 +239,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
     <!-- Fourth screen -->
@@ -267,49 +257,65 @@
           <li>Phone:</li>
         </ul>
       </div>
-
-      <footer class="footer fp-auto-height">
-        <div class="container">
-          <div>
-            <h6 class="footertext">Copyright &copy;上海交通大学##实验室</h6>
-          </div>
-        </div>
-      </footer>
     </div>
-
-    <!-- JSME Modal -->
-    <div class="modal fade" id="JSME" tabindex="-1" role="dialog" aria-labelledby="JSMELabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="JSMELabel">Draw by Molecular Editor</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div code="JME.class" name="JME" archive="JME.jar" width="765" height="400" id="JME">
-              You have to enable JavaScript in your browser to use JSME !
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
-          </div>
+    <footer class="section bg-dark fixed-bottom fp-auto-height" id="section4">
+      <div class="container">
+        <div>
+          <h6 class="footertext">Copyright &copy;上海交通大学##实验室</h6>
         </div>
       </div>
-    </div>
-    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <script src="dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" language="javascript" src="js/jsme/jsme.nocache.js"></script>
-    <script type="text/javascript" src="js/fullpage.js/dist/fullpage.js"></script>
-    <script type="text/javascript">
-      var myFullpage = new fullpage('#fullpage', {
-        sectionsColor: ['white', '#f2f2f2', 'white', '#f2f2f2'],
-        fixedElements: ['#header, .footer'],
-        paddingBottom: "200px",
-      });
-    </script>
+    </footer>
 </body>
+
+
+<!-- JSME Modal -->
+<div class="modal fade" id="JSME" tabindex="-1" role="dialog" style="position:relative;" aria-labelledby="JSMELabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <!-- JSME Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="JSMELabel">Draw by Molecular Editor</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="jsme_container"></div>
+       <!--  <button type="button" class="btn btn-primary" onclick="alert(jsmeApplet.smiles())">Show SMILES</button> -->
+
+        <!-- code="JME.class" name="JME" archive="JME.jar" width="765" height="400" id="JME">
+          You have to enable JavaScript in your browser to use JSME ! -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="alert(jsmeApplet.smiles())" data-dismiss="modal">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<!-- apply jsme.js -->
+<script type="text/javascript" language="javascript" src="js/jsme/jsme.nocache.js"></script>
+<script>
+  //this function will be called after the JavaScriptApplet code has been loaded.
+     function jsmeOnLoad() {
+         jsmeApplet = new JSApplet.JSME("jsme_container", "760px", "400px");
+    }
+ </script>
+<!-- apply fullpage.js -->
+<script type="text/javascript" src="js/fullpage.js/dist/fullpage.js"></script>
+<script type="text/javascript">
+  var myFullpage = new fullpage('#fullpage', {
+    sectionsColor: ['white', '#f2f2f2', 'white', '#f2f2f2'],
+    fixedElements: ['#header, .footer'],
+    scrollBar: true,
+    anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'footer'],
+    menu: '#myMenu',
+    navigation: true,
+  });
+</script>
 
 </html>
