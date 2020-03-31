@@ -5,7 +5,7 @@
   <title>Toolname-Index</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" media="screen" />
+  <link rel="icon" href="/assets/images/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="dist/css/mystyle.css" />
   <link rel="stylesheet" type="text/css" href="js/fullpage.js/dist/fullpage.css">
@@ -15,7 +15,7 @@
   <header>
     <nav class="navbar fixed-top navbar-expand-md navbar-dark" style="background-color: #563d7c;">
       <div class="container" id="myMenu">
-        <a data-menuanchor="firstPage" class="navbar-brand" href="#firstPage"><img src="assets/images/partner.png" height="30" alt="Toolname"></a>
+        <a data-menuanchor="firstPage" class="navbar-brand" href="#firstPage"><img src="assets/images/logo.svg" height="30" alt="Toolname"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -61,13 +61,11 @@
         <br />
         <div class="row">
           <div class="col-2"></div>
-          <div class="col-4 text-center">
-            <button type="button" class="btn btn-primary button-width160">Start</button>
+          <div id="myMenu" class="col-4 text-center">
+            <a data-menuanchor="secondPage" type="button" class="btn btn-primary button-width200 btn-lg" href="#secondPage" role="button">Start</a>
           </div>
           <div class="col-4 text-center">
-            <button type="button" class="btn btn-outline-primary button-width160">
-              Documentation
-            </button>
+            <a data-menuanchor="secondPage" type="button" class="btn btn-outline-primary button-width200 btn-lg" href="#thirdPage" role="button">Documentation</a>
           </div>
           <div class="col-2"></div>
         </div>
