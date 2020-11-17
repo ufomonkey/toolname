@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>SSPGN-Index</title>
+  <title>SSPGN-首页</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="/assets/images/favicon.ico"/>
@@ -23,13 +23,13 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav" id="myMenu">
             <li data-menuanchor="secondPage" class="nav-item active">
-              <a class="nav-link" href="#secondPage">Prediction</a>
+              <a class="nav-link" href="#secondPage">预测模型</a>
             </li>
             <li data-menuanchor="thirdPage" class="nav-item">
-              <a class="nav-link" href="#thirdPage">Documentation</a>
+              <a class="nav-link" href="#thirdPage">帮助文档</a>
             </li>
             <li data-menuanchor="fourthPage" class="nav-item">
-              <a class="nav-link" href="#fourthPage">Contact</a>
+              <a class="nav-link" href="#fourthPage">联系我们</a>
             </li>
           </ul>
         </div>
@@ -39,20 +39,19 @@
   <div id="fullpage">
     <!-- first screen -->
     <div class="section active" id="section0">
-      <h2 class="display-3 text-center margin-title">SSGPN Prediction Model</h2>
+      <h2 class="display-3 text-center margin-title">SSGPN 预测模型</h2>
       <div class="container">
-        <h5>
-          SSGPN(Semantic Similarity of Genotype-Phenotype Network) is a novel model for predicting pathogenic genes accoridng to the specific phenotypes group, by calculating the similarity symmetric coefficient between each gene and the input phenotypes.
+        <h5 class="clearfix" style="line-height: 30px;">
+          SSGPN(Semantic Similarity of Genotype-Phenotype Network)是一个基于语义相似度理论构建的，用于分析疾病表型与基因型相关的网络模型。您可以输入患者的异常表型，SSGPN会自动预测最相关的基因型，帮助您快速准确地诊断疾病，发现潜在致病基因。
         </h5>
-        <br />
         <br />
         <div class="row">
           <div class="col-2"></div>
           <div id="myMenu" class="col-4 text-center">
-            <a data-menuanchor="secondPage" type="button" class="btn btn-primary button-width200 btn-lg" href="#secondPage" role="button">Start</a>
+            <a data-menuanchor="secondPage" type="button" class="btn btn-primary button-width200 btn-lg" href="#secondPage" role="button">开始预测</a>
           </div>
           <div class="col-4 text-center">
-            <a data-menuanchor="secondPage" type="button" class="btn btn-outline-primary button-width200 btn-lg" href="#thirdPage" role="button">Documentation</a>
+            <a data-menuanchor="secondPage" type="button" class="btn btn-outline-primary button-width200 btn-lg" href="#thirdPage" role="button">帮助文档</a>
           </div>
           <div class="col-2"></div>
         </div>
@@ -60,17 +59,17 @@
         <br />
         <div class="row">
           <div class="col-5">
-            <h5 class="text-primary">Contact Us</h5>
+            <h5 class="text-primary">联系我们</h5>
             <hr />
             <p class="smalltext">
-              For questions, problems, comments on the SSGPN, please E-mail us.
+              如有任何关于SSGPN的问题和评论，欢迎通过邮件与我们联系
               <br />
-              Copyright © 2020, Shanghai Jiao Tong University
+              邮件地址：<a href="mailto:alexguoyf@126.com">alexguoyf@126.com</a>
             </p>
           </div>
           <div class="col-2"></div>
           <div class="col-5">
-            <h5 class="text-primary">Citation</h5>
+            <h5 class="text-primary">文献引用</h5>
             <hr />
             <p class="smalltext">
               Yangfan Guo; Jia Jia; Yixue Li: SSGPN: a prediction model by semantic similarity of genotype-phenotype network.
@@ -82,23 +81,18 @@
     <!-- second screen -->
     <div class="section" id="section1">
       <div class="container">
-        <h1 class="display-3 text-center margin-title">Start Prediction</h1>
+        <h1 class="display-3 text-center margin-title">开始预测</h1>
         <div class="row">
           <div class="col-6">
-            <h5 class="text-dark">Input File Upload</h5>
-            <button type="button" class="btn btn-outline-primary button-width80">Upload</button>
+            <h5 class="text-dark">上传输入文件</h5>
+            <button type="button" class="btn btn-outline-primary button-width80">上传</button>
             <p></p>
             <p class="smalltext">
-              Input File instruction:
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              euismod bibendum laoreet. Proin gravida dolor sit amet lacus
-              accumsan et viverra justo commodo.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              euismod bibendum laoreet. Proin gravida dolor sit amet lacus
-              accumsan et viverra justo commodo.
+              输入文件指引:
+              <br/>
+              可通过上传包含输入表型的txt文件，文件中应使用HPO ID代表表型，每个表型用回车隔开，各占一行。单个文件中的输入表型数量不得超过50个。可点击下方“sample.txt”查看示例文件。
             </p>
-            <h5 class="text-dark">Example File:</h5>
+            <h5 class="text-dark">示例文件</h5>
             <li>
               <button type="button" class="btn btn-link font-italic">
                 sample.txt
@@ -106,15 +100,18 @@
             </li>
           </div>
           <div class="col-6">
-            <h5 class="text-dark">Input Phenotypes</h5>
-            <!-- <button type="button" class="btn btn-outline-primary button-width80" data-toggle="modal"
-              data-target="#JSME">Draw</button> -->
+            <h5 class="text-dark">输入表型</h5>
+            <p class="smalltext">
+              可在下方文本框中输入用于预测的表型对应HPO ID
+            </p>
             <p></p>
-            <textarea class="form-control" rows="8" aria-label="With textarea"></textarea>
+            <textarea class="form-control" rows="5" aria-label="With textarea"></textarea>
             <div class="margin-top10 text-right">
-              <a type="button" class="btn btn-primary button-width80" href="result.html">Submit</a>
+              <a type="button" class="btn btn-primary button-width80" href="result.html">提交</a>
               <button type="button" class="btn btn-outline-primary button-width80"
-                style="margin-left: 10px;">Clear</button>
+                style="margin-left: 10px;">清除</button>
+              <button type="button" class="btn btn-outline-info button-width80"
+                style="margin-left: 10px;">示例</button>
             </div>
           </div>
         </div>
@@ -125,13 +122,11 @@
       <div class="container">
 
         <h1 class="display-3 text-center margin-title">
-          Ducumentation
+          帮助文档
         </h1>
 
         <h6 class="margin-buttom20">
-          This document provides detailed instruction for preparing the files,
-          and steps to run #Toolname. #Toolname is easy to use and only
-          requires the specific ##### file format.
+          下方帮助文档描述了该预测模型的理论依据、用途及使用方法，欢迎查看。
         </h6>
         <div class="accordion" id="accordionExample">
           <div class="card">
@@ -139,7 +134,7 @@
               <h2 class="mb-0">
                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
                   aria-expanded="true" aria-controls="collapseOne">
-                  1. Introduction
+                  1. 理论依据
                 </button>
               </h2>
             </div>
@@ -165,7 +160,7 @@
               <h2 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
                   aria-expanded="false" aria-controls="collapseTwo">
-                  2. Aim of the Toolname
+                  2. 模型用途
                 </button>
               </h2>
             </div>
@@ -190,7 +185,7 @@
               <h2 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
                   aria-expanded="false" aria-controls="collapseThree">
-                  3. Usage of the Toolname
+                  3. 使用方法
                 </button>
               </h2>
             </div>
@@ -229,65 +224,31 @@
       <div class="container">
 
 
-        <h1 class="display-3 text-center margin-title">Contact Us</h1>
+        <h1 class="display-3 text-center margin-title">联系我们</h1>
 
 
-        <ul>
-          <li>Email:</li>
-          <li>Copyright</li>
-          <li>Citation</li>
-          <li>Laboratory Website</li>
-          <li>Phone:</li>
+        <ul class="list-group list-group-flush bgcolor">
+          <li class="list-group-item bgcolor">邮件地址: <a href="mailto:alexguoyf@126.com">alexguoyf@126.com</a></li>
+          <li class="list-group-item bgcolor">版权所有: 洋帆数据科技有限公司</li>
+          <li class="list-group-item bgcolor">文献引用: Yangfan Guo; Jia Jia; Yixue Li: SSGPN: a prediction model by semantic similarity of genotype-phenotype network.</li>
+          <li class="list-group-item bgcolor">个人主页: www.ufomonkey.tech</li>
+          <li class="list-group-item bgcolor">联系电话: (86) 13817684368</li>
         </ul>
       </div>
     </div>
     <footer class="section bg-dark fixed-bottom fp-auto-height" id="section4">
       <div class="container">
         <div>
-          <h6 class="footertext">Copyright &copy;上海交通大学##实验室</h6>
+          <h6 class="footertext">Copyright &copy;洋帆数据科技有限公司</h6>
         </div>
       </div>
     </footer>
 </body>
 
 
-<!-- JSME Modal -->
-<div class="modal fade" id="JSME" tabindex="-1" role="dialog" style="position:relative;" aria-labelledby="JSMELabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-    <!-- JSME Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="JSMELabel">Draw by Molecular Editor</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div id="jsme_container"></div>
-       <!--  <button type="button" class="btn btn-primary" onclick="alert(jsmeApplet.smiles())">Show SMILES</button> -->
-
-        <!-- code="JME.class" name="JME" archive="JME.jar" width="765" height="400" id="JME">
-          You have to enable JavaScript in your browser to use JSME ! -->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="alert(jsmeApplet.smiles())" data-dismiss="modal">Submit</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
 <script src="dist/js/bootstrap.min.js"></script>
-<!-- apply jsme.js -->
-<script type="text/javascript" language="javascript" src="js/jsme/jsme.nocache.js"></script>
-<script>
-  //this function will be called after the JavaScriptApplet code has been loaded.
-     function jsmeOnLoad() {
-         jsmeApplet = new JSApplet.JSME("jsme_container", "760px", "400px");
-    }
- </script>
+
 <!-- apply fullpage.js -->
 <script type="text/javascript" src="js/fullpage.js/dist/fullpage.js"></script>
 <script type="text/javascript">

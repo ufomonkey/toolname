@@ -45,3 +45,7 @@
 .fp-enabled .modal{
     position:fixed !important;
  }
+
+ .bgcolor{
+   background-color: #F2F2F2;
+ }
